@@ -50,7 +50,6 @@ Data Sources: NASA FIRMS API, Google Maps API
 ## Getting Started
 To get started with the project, ensure you have Node.js installed, and then run the following commands to install the required libraries:
 
-```bash
 # Install frontend dependencies
 cd frontend
 npm install
@@ -69,5 +68,3 @@ uvicorn main:app --reload
 # Start the frontend (Different Terminal)
 cd ../<your Directory>/frontend
 npm start
-```
-
