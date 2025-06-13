@@ -1,70 +1,138 @@
-# BEACON
+# 🔥 BEACON – Real-Time Wildfire Detection & Emergency Response System  
+**Group 2 – HackRU Spring 2025**  
+Team Members:  
+- Nithik Pandya  
+- Krisha Jhala  
+- Preet Patel  
+- Azra Bano  
 
-**Group 2 - HackRU Spring - 2025**
+---
 
-## Team Members
-- Nithik Pandya
-- Krisha Jhala
-- Preet Patel
-- Azra Bano
+## 🚨 Overview
 
-## Overview
-Beacon is an advanced wildfire detection and monitoring system that integrates NASA's FIRMS (Fire Information for Resource Management System) with AI-driven analytics. It provides real-time fire data visualization and predictive insights to assist in wildfire management.
+**Beacon** is an advanced wildfire detection and evacuation planning platform that combines **NASA’s FIRMS fire data**, **AI-driven analytics**, and **real-time routing** to help communities, first responders, and public health officials make faster, smarter decisions during wildfire emergencies.
 
-## 🚀 The Problem
-Wildfires in Los Angeles and other urban areas present unique hazards as buildings, cars, and products are incinerated, exposing people to particulate matter, gases, chemicals, heavy metals, asbestos, PFAS, microplastics, and other toxic pollutants. They settle out of the air into soil and dust and can become resuspended during recovery and rebuilding efforts. Water quality can also be affected. The wildfires that began in early January 2025 killed 29 people, destroyed more than 16,000 structures, and exposed millions to toxic smoke.
+---
 
-According to a recent IEEE study on wildfire visualization systems for research and training, wildfires have become more unpredictable, intense, and devastating due to climate change. Key findings from the study highlight:
-Global wildfires have increased in frequency and severity, with events like Australia’s Black Summer Fires (2019-2020) burning 21% of the country’s forest land—a tenfold increase from previous years.
-Unprecedented wildfire behaviors (e.g., fire tornadoes, pyrocumulonimbus clouds) make traditional prediction models ineffective.
-Firefighters lack updated training to handle the erratic behavior of modern wildfires, relying on outdated drills and slide-based training rather than real-time AI-powered risk assessment tools.
-Mega wildfires (fires burning over 45,000 hectares) are becoming more common, leading to widespread destruction and health crises due to hazardous smoke inhalation.
-Existing wildfire visualization systems lack interactivity and real-time adaptability, making it difficult for both emergency responders and the public to predict fire spread and plan safe evacuation routes.
+## ❗ Problem Statement
 
-## 🚀 Our Solution: 
-Beacon To tackle these critical gaps, Beacon provides real-time wildfire detection and evacuation planning tool. Unlike traditional fire tracking systems, our platform offers:
+Wildfires are becoming more **frequent**, **unpredictable**, and **devastating** due to climate change. Traditional fire response systems are often static, slow, and ineffective at dealing with modern mega wildfires.
 
-✅ Live Fire Data from NASA FIRMS API – Real-time detection of active wildfires.
+> 🔥 *In early 2025, wildfires in California killed 29 people, destroyed over 16,000 structures, and exposed millions to toxic air.*  
+> *(Source: LA County Environmental Health Watch, 2025)*
 
-✅ Dynamic AI-Generated Evacuation Routes – Automatically reroutes users based on real-time Google Maps and Waze data for safer escape planning.
+A recent IEEE study found that current wildfire systems:
+- Cannot predict erratic fire behavior like fire tornadoes or pyrocumulonimbus clouds.
+- Rely on outdated, non-interactive visualization tools.
+- Fail to provide real-time risk assessments or dynamic evacuation planning.
+- Lack support for public health monitoring during recovery phases.
 
-✅ Air Quality & Smoke Impact Monitoring – Using AirNow API, we provide real-time AQI updates and predict smoke travel patterns.
+---
 
-✅ AI-Driven Fire Spread Predictions – Integrating NOAA weather data to analyze how wind, humidity, and temperature affect wildfire movement.
+## ✅ Our Solution: BEACON
 
-✅ Emergency Alerts & First Responder Assistance – Notifies affected users and fire departments through Twilio SMS and LoRaWAN for offline areas.
+Beacon closes these gaps by providing a **real-time, AI-powered wildfire safety platform**, combining emergency alerts, evacuation guidance, and predictive analytics into one unified system.
 
-🔥 Why This Matters 📍 Better Emergency Preparedness: Traditional systems fail to predict wildfire spread dynamically, leading to ineffective responses. Wildfire Guardian adapts in real-time, ensuring safer, more informed decision-making.
+### 🔍 Key Features
 
-🚗 Smarter Evacuations: Unlike static fire maps, our AI-driven routing system adjusts instantly based on changing wildfire conditions and road closures.
+- **📡 Live NASA FIRMS Fire Data**  
+  Real-time detection of active wildfire locations across the globe.
 
-🌫 Public Health Protection: By monitoring and visualizing air quality trends, we help residents understand when it’s safe to go outside and when to evacuate.
+- **🚗 Dynamic AI-Powered Evacuation Routes**  
+  Leverages **Google Maps** and **Waze** APIs to instantly reroute users based on real-time road conditions, fire proximity, and closures.
 
-🌎 The Future of Wildfire Safety Starts Here Beacon bridges the gap between advanced AI fire detection, evacuation planning, and real-time emergency response. By combining cutting-edge data visualization and predictive modeling, we empower communities to stay ahead of disasters.
+- **🌫️ Air Quality Monitoring**  
+  Integrates **AirNow API** to provide live AQI updates and **smoke drift predictions**, supporting safer evacuation and health decisions.
+
+- **🧠 Fire Spread Prediction Engine**  
+  Uses **NOAA weather data** (wind, humidity, temperature) and machine learning to model and visualize likely fire movement.
+
+- **📲 Emergency Alerts for Offline Zones**  
+  Sends alerts via **Twilio SMS** and **LoRaWAN** for areas with poor internet access, aiding both citizens and first responders.
+
+---
+
+## 🌎 Why This Matters
+
+- **🔐 Emergency Preparedness**: Traditional tools can’t adapt fast enough to new threats — Beacon delivers real-time adaptability and awareness.  
+- **🚧 Smart Evacuation Routes**: Go beyond static fire maps with dynamic, AI-generated paths to safety.  
+- **🩺 Public Health Protection**: Visualizes smoke spread and air quality to help communities understand when to evacuate or shelter.  
+- **🌍 Climate Resilience Tool**: Helps governments and responders better plan for an era of more extreme wildfires.
+
+---
 
 ## 🛠️ Technologies Used
-Frontend: React (for map rendering)
-Backend: Node.js (Python)
-Data Sources: NASA FIRMS API, Google Maps API
 
-## Getting Started
-To get started with the project, ensure you have Node.js installed, and then run the following commands to install the required libraries:
+| Category     | Tools Used                                 |
+|--------------|---------------------------------------------|
+| Frontend     | React (Map UI, Dashboard)                  |
+| Backend      | Node.js, Python                            |
+| APIs         | NASA FIRMS, Google Maps, Waze, AirNow, NOAA|
+| Messaging    | Twilio SMS, LoRaWAN                        |
+| Hosting/API  | FastAPI (with `uvicorn` server)            |
 
-# Install frontend dependencies
+---
+
+## 🧪 Getting Started
+
+### 🔧 Prerequisites
+- Install [Node.js](https://nodejs.org/)
+- Install [Python 3.x](https://www.python.org/)
+
+### 📦 Install Frontend Dependencies
+```bash
 cd frontend
 npm install
+```
 
-# Install backend dependencies
+### 📦 Install Backend Dependencies
+```bash
 cd backend
 npm install
+```
 
-# Configure environment variables
-# Create a .env file in the server/ directory and set up database credentials & API keys.
+### 🔐 Environment Configuration
+Create a `.env` file in the `/backend` directory and include the following:
+```env
+NASA_API_KEY=your_key_here
+GOOGLE_MAPS_API_KEY=your_key_here
+AIRNOW_API_KEY=your_key_here
+TWILIO_SID=your_twilio_sid
+TWILIO_AUTH_TOKEN=your_twilio_token
+```
 
-# Start the backend (Different Terminal)
-cd ../<your Directory>/backend
+### ▶️ Start Backend Server
+```bash
+cd backend
 uvicorn main:app --reload
+```
 
-# Start the frontend (Different Terminal)
-cd ../<your Directory>/frontend
+### ▶️ Start Frontend App
+```bash
+cd frontend
 npm start
+```
+
+---
+
+## 📈 Future Plans
+
+- Add wildfire simulation tools for training exercises
+- Public-facing mobile app for fast alerts and routing
+- Integration with drone imaging for real-time fire boundaries
+- Expand multilingual support and accessibility features
+
+---
+
+## 📄 License
+This project was developed at HackRU Spring 2025 and is open for educational and non-commercial use.
+
+---
+
+## 🙌 Acknowledgments
+
+Thanks to:
+- **NASA FIRMS** for real-time fire data  
+- **NOAA** and **AirNow** for public health insights  
+- **Google Maps API** for routing intelligence  
+- **HackRU** for the opportunity to build solutions that matter
